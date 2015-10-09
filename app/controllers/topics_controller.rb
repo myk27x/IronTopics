@@ -1,10 +1,8 @@
-class TopicsController < ActionController::Base
+class TopicsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @topic = Topic.all.each do |topic|
-      topic
-    end
+    @topic = Topic.all
   end
 
   def new

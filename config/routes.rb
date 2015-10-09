@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # devise_scope :user do
   #   root to: "devise/sessions#new"
   # end
-
-  resources :topics
+  # resources :users do
+    resources :topics
+  # end
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
   root to: 'topics#index'
