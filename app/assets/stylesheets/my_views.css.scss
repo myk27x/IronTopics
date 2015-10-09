@@ -1,0 +1,32 @@
+body {
+  .notice, .alert {
+    background-color: #444;
+    color: white;
+    font-weight: bolder;
+    margin: 0px;
+    border-radius: 0px;
+  }
+}
+
+#wat {
+  height: 609px;
+  width: 100%;
+  text-align: center;
+  #noheader {
+    height: 200px;
+    background-color: #444;
+  }
+  #main_log {
+    height: 150px;
+    h2 {
+      background-color: #444;
+      color: white;
+      margin-top: 0px;
+      padding-bottom: 8px;
+    }
+  }
+  #nofooter {
+    height: 259px;
+    background-color: #444;
+  }
+}

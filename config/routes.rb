@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  # resources :topics
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  # root 'topics#index'
   devise_scope :user do
     root to: "devise/sessions#new"
   end

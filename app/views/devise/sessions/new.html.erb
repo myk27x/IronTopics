@@ -1,31 +1,16 @@
-<h2>Log in</h2>
+<div id="wat">
+<div id="noheader"></div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<div id="main_log">
+  <h2>Seellll yourrr sooouuulllll to theee gittzzzzzz....</h2>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= link_to omniauth_authorize_path(resource_name, :github), class: "btn btn-primary" do %>
-  <i class="fa fa-lg fa-github"></i>
-  <%= t('.sign_in_with_provider', provider: "github".titleize, :default => "Sign in with Github") %>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <p>(then get to work by siging in...)</p>
+      <%= link_to omniauth_authorize_path(resource_name, :github), class: "btn btn-social-icon btn-lrg btn-github" do %>
+      <i class="fa fa-lg fa-github"></i>
+      <%= t('.sign_in_with_provider', provider: "github".titleize, :default => "") %>
+      <% end %>
+  <% end %>
+</div>
+<div id="nofooter"></div>
+</div>

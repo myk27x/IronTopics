@@ -19,6 +19,7 @@ gem 'rails', '4.2.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'bootstrap-social-rails'
 gem 'autoprefixer-rails', '~> 6.0.3'
 gem 'font-awesome-sass'
 
