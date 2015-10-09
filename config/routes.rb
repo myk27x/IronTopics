@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
-  # resources :topics
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-  # root 'topics#index'
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  # devise_scope :user do
+  #   root to: "devise/sessions#new"
+  # end
 
+  resources :topics
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
+  root to: 'topics#new'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
