@@ -6,12 +6,12 @@
 <table>
   <% @topic.each do |topic| %>
   <tr>
-      <td><h3><%= topic.title %></h3></td>
+      <td><h3><%= link_to "#{topic.title}", topic_path(topic.id) %></h3></td>
       <td><div><%= topic.description %></div></td>
   </tr>
   <tr>
     <td>
-      <%= render 'starbar' %>
+      <% render 'starbar' %>
     </td>
   </tr>
   <% end %>

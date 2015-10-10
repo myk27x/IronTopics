@@ -1,0 +1,10 @@
+<div>
+  <%= @topic.title %>
+  <%= @topic.focus %>
+  <%= @topic.description %>
+  <% @topic.interests.each do |interest|%>
+  <%= interest.rating %>
+  <%= interest.comment %>
+  <% end %>
+  <%= link_to "add interest", interests_path, method: :create %>
+</div>
