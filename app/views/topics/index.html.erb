@@ -4,6 +4,7 @@
 <div id="topics">
   <% @topic.each do |topic| %>
     <div id="topic_listing">
+      <p> <%= topic.score %></p>
       <%= link_to "#{topic.title}", topic_path(topic.id) %>
     </div>
   <% end %>

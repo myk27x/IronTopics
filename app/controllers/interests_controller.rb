@@ -1,4 +1,5 @@
 class InterestsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @interest = Interest.new(interest_params)
