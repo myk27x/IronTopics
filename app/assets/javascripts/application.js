@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var setStars = function()
+{
+  $('input.rating').each(function() {
+    $(this).rating();
+  });
+}
+$(document).ready(setStars);
+$(document).on('page:load', setStars);

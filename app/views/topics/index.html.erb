@@ -1,22 +1,10 @@
-<div id="header">
-  <h1> . T . I . Y . I . T . </h1>
-  <h3><%= image_tag("tiy.png", size: "50x50") %> IRON TOPICS <h3>
-</div>
-<p><%= link_to "TOPIC to be added", new_topic_path %></p>
-<table>
+<%= render 'navbar' %>
+<p>Have a topic to be shared? <%= link_to " <Add it here>", new_topic_path %></p>
+
+<div id="topics">
   <% @topic.each do |topic| %>
-  <tr>
-      <td><h3><%= link_to "#{topic.title}", topic_path(topic.id) %></h3></td>
-      <td><div><%= topic.description %></div></td>
-  </tr>
-  <tr>
-    <td>
-      <% render 'starbar' %>
-    </td>
-  </tr>
+    <div id="topic_listing">
+      <%= link_to "#{topic.title}", topic_path(topic.id) %>
+    </div>
   <% end %>
-</table>
-
-
-
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+</div>

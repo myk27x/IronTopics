@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topic = Topic.all
+    @topic = Topic.all.order(score: :desc)
   end
 
   def new
@@ -11,6 +11,9 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @commented = Interest.find_by("topic_id = ?", @topic.id)
+    @interest = Interest.new
+    @user = User.find_by(current_user.id)
   end
 
   def create
@@ -23,7 +26,7 @@ class TopicsController < ApplicationController
 
 private
   def topic_params
-    params.require(:topic).permit(:title, :description)
+    params.require(:topic).permit(:title, :description, :focus)
   end
 
   def set_topic

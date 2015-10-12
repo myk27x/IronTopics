@@ -1,0 +1,13 @@
+<div id="header">
+  <h3>
+    <%= image_tag("tiy.png", size: "55x55") %> IRON TOPICS
+  </h3>
+  <div>
+    <span id="home">
+      <%= link_to "HOME", topics_path, method: :get,class:"glyphicon glyphicon-home" %>
+    </span>
+    <span id="logout">
+      <%= link_to "LOGOUT", destroy_user_session_path, method: :delete,class:"glyphicon glyphicon-log-out" %>
+    </span>
+  </div>
+</div>
