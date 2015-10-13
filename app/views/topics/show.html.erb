@@ -1,8 +1,11 @@
 <%= render 'navbar' %>
 <div id="comment_page">
-  <div><%= @topic.title %></div>
-  <div><%= @topic.focus %></div>
-  <div><%= @topic.description %></div>
+  <div id="title">
+    <div><%= @topic.title %> :</div>
+  <div id="description"> <%= @topic.description %></div>
+</div>
+  <div id="focus">Focus area: <div><%= @topic.focus %></div></div>
+
   <div id="ratings" class="well well-sm">
   <% @topic.interests.each do |interest|%>
   <div id="user_rating">

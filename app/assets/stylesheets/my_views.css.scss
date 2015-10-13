@@ -2,7 +2,7 @@ body {
   .notice, .alert {
     text-align: center;
     background-color: #444;
-    color: white;
+    color: red;
     font-weight: bolder;
     margin: 0px;
     border-radius: 0px;
@@ -34,18 +34,38 @@ body {
 
 #header {
   // background-color: green;
+  h3 {
+    margin-left: 5px;
+    font-size: 50px;
+    img {
+      margin-bottom: 14px;
+    }
+  }
 }
 
-#home , #logout{
-  color: black;
+#home {
+  margin-top: 10px;
+  margin-left: 20px;
+  a {
+    color: black;
+  }
 }
 
 #logout {
   float: right;
+  margin-right: 20px;
+  a {
+    color: black;
+  }
+}
+
+#add_field {
+  margin-left: 20px;
 }
 
 #comment_page {
   margin: 4px;
+  padding: 0px 20px;
 }
 .glyphicon {
   font-size: 19px;
@@ -67,6 +87,7 @@ body {
 
 #blank {
   color: white;
+  // background-color: #f5f5f5;
   font-size: 16px;
 }
 
@@ -85,7 +106,8 @@ body {
 }
 
 #minus_rating {
-  color: white;
+  color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 #topics {
@@ -130,5 +152,29 @@ body {
         }
       }
     }
+  }
+}
+
+#title {
+  margin-left: 10px;
+  div {
+    font-family: serif;
+    font-size: 29px;
+    display: inline;
+  }
+  #description {
+    display: inline;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+
+#focus {
+  margin-left: 10px;
+  font-family: serif;
+  font-size: 16px;
+  div {
+    font-weight: bold;
+    display: inline;
   }
 }
