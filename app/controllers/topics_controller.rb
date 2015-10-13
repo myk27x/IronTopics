@@ -11,15 +11,25 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @commented = Interest.find_by("topic_id = ?", @topic.id)
+    @commented = current_user.interests.where("topic_id = ?", @topic.id)
+    @rated = @commented.where("rating is not null")
     @interest = Interest.new
     @user = User.find_by(current_user.id)
+  end
+
+  def edit
   end
 
   def create
     @topic = Topic.new(topic_params)
     @topic.user_id = current_user.id
     @topic.save
+
+    redirect_to topics_path
+  end
+
+  def update
+    @topic.update(topic_params)
 
     redirect_to topics_path
   end

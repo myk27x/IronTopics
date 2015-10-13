@@ -26,9 +26,7 @@
   <div>
       <%= form_for(@interest) do |f| %>
       <div class="field">
-        <% if @commented == nil %>
-          <%= f.hidden_field :rating, class: "rating form_control" %>
-        <% elsif @commented.user_id == current_user.id %>
+        <% if @rated != [] %>
           <% 5.times do %>
             <div id="blank" class="glyphicon glyphicon-ok-sign"></div>
           <% end %>
