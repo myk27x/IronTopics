@@ -1,7 +1,11 @@
+* {
+  font-family: 'Palatino'
+}
+
 body {
   .notice, .alert {
     text-align: center;
-    background-color: #444;
+    background-color: #1E3139;
     color: red;
     font-weight: bolder;
     margin: 0px;
@@ -13,14 +17,15 @@ body {
   height: 609px;
   width: 100%;
   text-align: center;
+  background-color: #1E3139;
   #noheader {
     height: 200px;
-    background-color: #444;
   }
   #main_log {
     height: 150px;
+    background-color: white;
     h2 {
-      background-color: #444;
+      background-color: #1E3139;
       color: white;
       margin-top: 0px;
       padding-bottom: 8px;
@@ -28,13 +33,26 @@ body {
   }
   #nofooter {
     height: 259px;
-    background-color: #444;
   }
+}
+
+.fa-github {
+  background: rgb(255,0,0);
+  background: -moz-linear-gradient(top, rgb(255,0,0) 0%, rgb(255,161,79) 17%, rgb(255,255,5) 34%, rgb(120,255,10) 51%, rgb(15,75,255) 68%, rgb(99,15,255) 78%, rgb(255,23,15) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(255,0,0)), color-stop(17%, rgb(255,161,79)), color-stop(34%, rgb(255,255,5)), color-stop(51%, rgb(120,255,10)), color-stop(68%, rgb(15,75,255)), color-stop(78%, rgb(99,15,255)), color-stop(100%, rgb(255,23,15)));
+  background: -webkit-linear-gradient(top, rgb(255,0,0) 0%, rgb(255,161,79) 17%, rgb(255,255,5) 34%, rgb(120,255,10) 51%, rgb(15,75,255) 68%, rgb(99,15,255) 78%, rgb(255,23,15) 100%);
+  background: -o-linear-gradient(top, rgb(255,0,0) 0%, rgb(255,161,79) 17%, rgb(255,255,5) 34%, rgb(120,255,10) 51%, rgb(15,75,255) 68%, rgb(99,15,255) 78%, rgb(255,23,15) 100%);
+  background: -ms-linear-gradient(top, rgb(255,0,0) 0%, rgb(255,161,79) 17%, rgb(255,255,5) 34%, rgb(120,255,10) 51%, rgb(15,75,255) 68%, rgb(99,15,255) 78%, rgb(255,23,15) 100%);
+  background: linear-gradient(to bottom, rgb(255,0,0) 0%, rgb(255,161,79) 17%, rgb(255,255,5) 34%, rgb(120,255,10) 51%, rgb(15,75,255) 68%, rgb(99,15,255) 78%, rgb(255,23,15) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff170f', GradientType=0 );
+  color: black;
 }
 
 #header {
   // background-color: green;
   h3 {
+    font-family: 'Arbutus';
+    color: #1E3139;
     margin-left: 5px;
     font-size: 50px;
     img {
@@ -54,7 +72,7 @@ body {
   margin-top: 10px;
   margin-left: 20px;
   a {
-    color: black;
+    color: #1E3139;
   }
 }
 
@@ -62,7 +80,7 @@ body {
   float: right;
   margin-right: 20px;
   a {
-    color: black;
+    color: #1E3139;
   }
 }
 
@@ -125,7 +143,7 @@ body {
     background-color: #aaa;
     margin: 2px;
     width: 33%;
-    border: 2px solid black;
+    border: 2px solid #1E3139;
     text-align: center;
     font-size: 27px;
     border-radius: 10px;
