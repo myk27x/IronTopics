@@ -41,6 +41,13 @@ body {
       margin-bottom: 14px;
     }
   }
+  p {
+    margin-bottom: 18px;
+  }
+}
+
+#add_link {
+  margin-left: 10px;
 }
 
 #home {
@@ -115,11 +122,13 @@ body {
   flex-wrap: wrap;
   width: auto;
   #topic_listing {
+    background-color: #aaa;
     margin: 2px;
     width: 33%;
     border: 2px solid black;
     text-align: center;
     font-size: 27px;
+    border-radius: 10px;
     div {
       width: 100%;
       color: #bbb;
