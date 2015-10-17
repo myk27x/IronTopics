@@ -2,13 +2,14 @@
   <div>
     <div id="home">
       <%= link_to "HOME", topics_path, method: :get,class:"glyphicon glyphicon-home" %>
+    </div>
+    <h3>
+      <%= image_tag("tiy.png", size: "65x65") %> IRON TOPICS
+    </h3>
     <div id="logout">
       <%= link_to "LOGOUT", destroy_user_session_path, method: :delete,class:"glyphicon glyphicon-log-out" %>
     </div>
   </div>
 </div>
-  <h3>
-    <%= image_tag("tiy.png", size: "55x55") %> IRON TOPICS
-  </h3>
-  <p id="add_link">Have a topic you want reviewed? <%= link_to " <Add it here>", new_topic_path %></p>
-</div>
+<div id="spacer"></div>
+<p id="add_link">Have a topic you want reviewed? <%= link_to " <Add it here>", new_topic_path %></p>
