@@ -51,30 +51,30 @@ body {
 #header {
   div{
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     #home {
       margin-top: 10px;
-      margin-left: 20px;
-      width: 25%;
+      width: 8%;
       a {
+        padding-left: 10px;
         color: #1E3139;
       }
     }
     h3 {
+      text-align: center;
       font-family: 'Arbutus';
       color: #1E3139;
       margin-left: 5px;
       font-size: 50px;
-      width: 62%;
+      width: 83%;
       img {
         margin-bottom: 14px;
       }
     }
     #logout {
-      width: 11%;
+      width: 8%;
       margin-top: 10px;
-      padding-left: 20px;
+      // padding-left: 20px;
       a {
         color: #1E3139;
       }
@@ -89,6 +89,7 @@ body {
 }
 
 #add_link {
+  margin-top: 8px;
   margin-left: 10px;
 }
 
