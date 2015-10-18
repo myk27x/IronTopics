@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     resource  :interests
   # end
 
-
   root to: 'topics#index'
+
+  get 'search', to: 'topics#search'
 
 end

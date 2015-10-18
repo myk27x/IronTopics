@@ -10,6 +10,12 @@ class TopicsController < ApplicationController
     @topic = Topic.new
   end
 
+  def search
+    found = params[:title]
+    @topic = Topic.where("title like ?", "%#{found}%")
+    # byebug
+  end
+
   def show
     @commented = current_user.interests.where("topic_id = ?", @topic.id)
     @rated = @commented.where("rating is not null")

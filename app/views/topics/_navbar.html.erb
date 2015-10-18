@@ -1,7 +1,12 @@
 <div id="header">
   <div>
     <div id="home">
-      <%= link_to "HOME", topics_path, method: :get,class:"glyphicon glyphicon-home" %>
+      <div>
+        <%= link_to "HOME", topics_path, method: :get,class:"glyphicon glyphicon-home" %>
+      </div>
+      <div id="search">
+        <input id="to_search" type="text" placeholder=" Search" data-remote= "true">
+      </div>
     </div>
     <h3>
       <%= image_tag("tiy.png", size: "65x65") %> IRON TOPICS

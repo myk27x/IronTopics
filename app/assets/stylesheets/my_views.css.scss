@@ -53,11 +53,18 @@ body {
     display: flex;
     width: 100%;
     #home {
+      display: block;
       margin-top: 10px;
       width: 8%;
       a {
+        height: 20px;
         padding-left: 10px;
         color: #1E3139;
+      }
+      #search {
+        padding-left: 10px;
+        height: 30px;
+        margin-top: 40%;
       }
     }
     h3 {

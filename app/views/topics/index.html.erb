@@ -1,15 +1,5 @@
 <%= render 'navbar' %>
 
 <div id="topics">
-  <% @topic.each do |topic| %>
-    <div id="topic_listing">
-      <div> interest score <span><%= topic.score %></span></div>
-      <%= link_to "#{topic.title}", topic_path(topic.id) %>
-      <div id="edit_link">
-        <% unless topic.comment_count > 0 || topic.user_id != current_user.id %>
-            <%= link_to "edit", edit_topic_path(topic) %>
-          <% end %>
-      </div>
-    </div>
-  <% end %>
+  <%= render @topic %>
 </div>
