@@ -1,5 +1,10 @@
 <div id="topic_listing">
-  <div> interest score <span><%= topic.score %></span></div>
+  <div id="thing_holder">
+    <div id="thing1"><%=topic.focus%></div>
+      <div id="thing2"> interest score
+        <span id="thing3"><%= topic.score %></span>
+      </div>
+  </div>
   <%= link_to "#{topic.title}", topic_path(topic.id) %>
   <div id="edit_link">
     <% unless topic.comment_count > 0 || topic.user_id != current_user.id %>

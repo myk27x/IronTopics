@@ -163,36 +163,51 @@ body {
     text-align: center;
     font-size: 27px;
     border-radius: 10px;
-    div {
-      width: 100%;
-      color: #999;
-      font-size: 14px;
-      padding-top: 2px;
-      padding-right: 5px;
-      text-align: right;
-      span {
-        color: #00e600;
-      }
+  }
+  a {
+    text-decoration: none;
+    color: #1E3139;
+    &:hover {
+      color: black;
+      text-decoration: underline;
     }
+  }
+  #edit_link {
+    height: 18px;
+    width: 100%;
     a {
-      text-decoration: none;
-      color: #1E3139;
+      float: right;
+      font-size: 14px;
+      padding-right: 5px;
+      color: blue;
       &:hover {
-        color: black;
+        color: blue;
         text-decoration: underline;
       }
     }
-    #edit_link {
-      height: 18px;
-      width: 100%;
-      a {
-        float: right;
-        color: blue;
-        &:hover {
-          color: blue;
-          text-decoration: underline;
-        }
-      }
+  }
+}
+
+#thing_holder {
+  display: flex;
+  flex-wrap: wrap;
+  #thing1{
+    width: 50%;
+    color: #999;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-left: 5px;
+    text-align: left;
+  }
+  #thing2{
+    width: 50%;
+    color: #999;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-right: 5px;
+    text-align: right;
+    #thing3 {
+      color: #00e600;
     }
   }
 }
