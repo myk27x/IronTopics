@@ -177,7 +177,7 @@ body {
     width: 100%;
     a {
       float: right;
-      font-size: 14px;
+      font-size: 16px;
       padding-right: 5px;
       color: blue;
       &:hover {
@@ -191,19 +191,16 @@ body {
 #thing_holder {
   display: flex;
   flex-wrap: wrap;
+  color: #999;
+  font-size: 14px;
+  padding-top: 2px;
   #thing1{
     width: 50%;
-    color: #999;
-    font-size: 14px;
-    padding-top: 2px;
     padding-left: 5px;
     text-align: left;
   }
   #thing2{
     width: 50%;
-    color: #999;
-    font-size: 14px;
-    padding-top: 2px;
     padding-right: 5px;
     text-align: right;
     #thing3 {
