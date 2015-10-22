@@ -155,22 +155,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: auto;
-  #topic_listing {
+  .topic_listing {
     background-color: #ddd;
     margin: 2px;
     width: 33%;
     border: 2px solid #1E3139;
+    border-radius: 10px;
+    &:hover {
+      p {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
     text-align: center;
     font-size: 27px;
-    border-radius: 10px;
-  }
-  a {
+    padding-top: 3px;
+    margin: 0px;
     text-decoration: none;
-    color: #1E3139;
-    &:hover {
-      color: black;
-      text-decoration: underline;
-    }
+    color: #59676D;
   }
   #edit_link {
     height: 18px;
