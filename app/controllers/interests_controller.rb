@@ -15,7 +15,7 @@ class InterestsController < ApplicationController
     @interest.save
     @topic.save
 
-    redirect_to topic_path(@interest.topic_id)
+    redirect_to topics_path
   end
 
 private

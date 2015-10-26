@@ -1,14 +1,17 @@
-<div id="topic_listing">
-  <div id="thing_holder">
-    <div id="thing1"><%=topic.focus%></div>
-      <div id="thing2"> interest score
-        <span id="thing3"><%= topic.score %></span>
+<div id="topic_listing_<%= topic.id %>" class="topic_listing" data-topic-id='<%= topic.id %>'>
+  <div data-toggle="modal" data-target=".bs-example-modal-lg">
+    <div class="thing_holder">
+      <div class="thing1"><%=topic.focus%></div>
+      <div class="thing2"> interest score
+        <span><%= topic.score %></span>
       </div>
-  </div>
-  <%= link_to "#{topic.title}", topic_path(topic.id) %>
-  <div id="edit_link">
+    </div>
+    <p><%= topic.title %></p>
+
+  <div class="edit">
     <% unless topic.comment_count > 0 || topic.user_id != current_user.id %>
-        <%= link_to "edit", edit_topic_path(topic) %>
-      <% end %>
+      <%= link_to "edit", edit_topic_path(topic), class: "edit_link" %>
+    <% end %>
   </div>
+</div>
 </div>

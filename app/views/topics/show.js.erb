@@ -1,0 +1,5 @@
+// Create a bootstrap modal, fill it with the html from erb, show the modal
+$(".modal-content").html( $("<%= escape_javascript(render partial: 'show', locals: { topic: @topic }) %>") )
+$('.modal-content input.rating').each(function() {
+  $(this).rating();
+});

@@ -1,5 +1,4 @@
 // from: https://github.com/dreyescat/bootstrap-rating
-
 (function ($, undefined) {
   'use strict';
 
