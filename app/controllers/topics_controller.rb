@@ -1,7 +1,6 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
-  before_action :escape_from_DOOM
 
   def index
     @topic = Topic.all.order(score: :desc)
@@ -41,9 +40,6 @@ class TopicsController < ApplicationController
   end
 
 private
-  def escape_from_DOOM
-  end
-
   def topic_params
     params.require(:topic).permit(:title, :description, :focus)
   end
