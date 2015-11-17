@@ -1,0 +1,35 @@
+#comment_page
+  #title
+    %div
+      = @topic.title
+      \ :
+    #description=@topic.description
+  #focus
+    Focus area:
+    = @topic.focus
+
+  #ratings.well.well-sm
+    - @topic.interests.each do |interest|
+      #user_rating
+        - if interest.rating
+          - (5 - interest.rating).times do
+            .glyphicon.glyphicon-ok-sign#minus_rating
+          - interest.rating.times do
+            .glyphicon.glyphicon-ok-sign#star_rating
+        - else
+          - 5.times do
+            .glyphicon.glyphicon-ok-sign#minus_rating
+        %span= @user.name
+        %span said:
+        %span= interest.comment
+    %div
+      = form_for(@interest) do |f|
+        .field
+          - if @rated != []
+            - 5.times do
+              #blank.glyphicon.glyphicon-ok-sign
+          - else
+            = f.hidden_field :rating, class: "rating form_control"
+          = f.text_field :comment, placeholder: 'type your comment here', size: 100
+          = hidden_field_tag(:topic_id, @topic.id)
+          = f.submit("Comment")

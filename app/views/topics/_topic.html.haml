@@ -1,0 +1,12 @@
+.topic_listing{id: "topic_listing_#{topic.id}", 'data-topic-id': "#{topic.id}"}
+  %div{'data-toggle': "modal", 'data-target': ".bs-example-modal-lg"}
+    .thing_holder
+      .thing1=topic.focus
+      .thing2
+        interest score
+        %span= topic.score
+    %p= topic.title
+
+  .edit
+    - unless topic.comment_count > 0 || topic.user_id != current_user.id
+      = link_to "edit", edit_topic_path(topic), class: "edit_link"

@@ -1,0 +1,11 @@
+= render 'navbar'
+%p#add_link
+  Have a topic you want reviewed?
+  = link_to " <Let's talk about it!>", new_topic_path
+
+#topics
+  = render @topic
+
+.modal.fade.bs-example-modal-lg{tabindex: "-1", role:"dialog", aria_labelledby: "myLargeModalLabel"}
+  .modal-dialog.modal-lg
+    .modal-content
