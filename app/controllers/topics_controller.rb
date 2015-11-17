@@ -14,7 +14,6 @@ class TopicsController < ApplicationController
   def search
     found = params[:title]
     @topic = Topic.where("title like ?", "%#{found}%")
-    # byebug
   end
 
   def show
