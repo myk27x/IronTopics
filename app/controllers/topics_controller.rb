@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :set_topic, only: [:show, :edit, :update]
 
   def index
     @topic = Topic.all.order(score: :desc)
@@ -20,9 +20,6 @@ class TopicsController < ApplicationController
     @rated = @commented.where("rating is not null")
     @interest = Interest.new
     @user = User.find_by(current_user.id)
-  end
-
-  def edit
   end
 
   def create
