@@ -110,9 +110,16 @@ body {
   background-color: #1E3139;
 }
 
-#add_link {
-  margin-top: 8px;
+#add_topic {
+  margin-top: 10px;
   margin-left: 10px;
+  span {
+    color: blue;
+    text-decoration: underline;
+    &:hover {
+      font-weight: bolder;
+    }
+  }
 }
 
 #add_field {
