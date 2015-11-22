@@ -125,6 +125,24 @@ body {
 
 #add_field {
   margin: 20px;
+  #topic_title, #topic_description {
+    font-size: 29px;
+    width: 48%;
+    margin: 5px;
+  }
+  #topic_focus, #topic_submit {
+    font-size: 29px;
+    width: 48%;
+    margin: 5px;
+    input {
+      width: 48%;
+      text-align: center;
+      &:hover {
+        background-color: #00e600;
+        border-color: green;
+      }
+    }
+  }
 }
 
 #comment_page {
@@ -260,16 +278,5 @@ body {
   div {
     font-weight: bold;
     display: inline;
-  }
-}
-
-#topic_description {
-  width: 57%;
-}
-
-.actions {
-  width: 57%;
-  #cancel {
-    float: right;
   }
 }
