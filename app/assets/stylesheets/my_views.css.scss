@@ -111,13 +111,14 @@ body {
 }
 
 #add_topic {
+  font-size: 16px;
   margin-top: 10px;
   margin-left: 10px;
   span {
+    cursor: pointer;
     color: blue;
-    text-decoration: underline;
     &:hover {
-      font-weight: bolder;
+      text-decoration: underline;
     }
   }
 }
@@ -178,6 +179,7 @@ body {
   flex-wrap: wrap;
   width: auto;
   .topic_listing {
+    cursor: pointer;
     background-color: #ddd;
     margin: 2px;
     width: 33%;
