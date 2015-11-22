@@ -1,17 +1,13 @@
 = form_for(@topic) do |f|
   #add_field
     .field
-      = f.label :focus_area
-      %br
-      = f.text_field :focus
+      = f.text_field :focus, placeholder: "Focus area"
     .field
-      = f.label :title
       %br
-      = f.text_field :title
+      = f.text_field :title, placeholder: "Title"
     .field
-      = f.label :description
       %br
-      = f.text_area :description
+      = f.text_area :description, placeholder: "Enter your description here"
       .actions
         = f.submit
         #cancel
