@@ -1,5 +1,5 @@
 = render 'navbar'
-%p#add_link
+%p#add_topic{'data-toggle': "modal", 'data-target': ".bs-example-modal-lg"}
   Have a topic you want reviewed?
   = link_to " <Let's talk about it!>", new_topic_path
 
