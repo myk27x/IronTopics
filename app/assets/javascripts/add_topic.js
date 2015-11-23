@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-  $("#add_topic").on("click", function()
+  $(".add_link").on("click", function()
   {
     $(".modal-content").html("");
 

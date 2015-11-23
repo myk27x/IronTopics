@@ -52,11 +52,15 @@ body {
   div{
     display: flex;
     width: 100%;
+    #home-mini {
+      display: none;
+    }
     #home {
       display: flex;
       flex-direction: column;
       margin-top: 10px;
       width: 15%;
+      min-width: 165px;
       a {
         width: 95px;
         height: 20px;
@@ -66,7 +70,7 @@ body {
       #search {
         padding-left: 10px;
         height: 30px;
-        margin-top: 20%;
+        margin-top: 37.5px;
         :focus {
           outline: none !important;
           border:1px solid #1E3139;
@@ -86,8 +90,12 @@ body {
         margin-bottom: 14px;
       }
     }
+    #logout-mini {
+      display: none;
+    }
     #logout {
       width: 10%;
+      min-width: 120px;
       margin-top: 10px;
       padding-left: 8px;
       a {
@@ -110,16 +118,23 @@ body {
   background-color: #1E3139;
 }
 
+#add_topic-mini {
+  display: none;
+}
+
 #add_topic {
   font-size: 16px;
   margin-top: 10px;
   margin-left: 10px;
-  span {
+  .add_link {
     cursor: pointer;
     color: blue;
     &:hover {
       text-decoration: underline;
     }
+  }
+  #search-mini {
+    display: none;
   }
 }
 
@@ -278,5 +293,128 @@ body {
   div {
     font-weight: bold;
     display: inline;
+  }
+}
+
+@media (max-width: 1212px) {
+  #topics {
+    .topic_listing {
+      width: 32.7%;
+    }
+  }
+  #header {
+    div {
+      h3 {
+        padding-right: 5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #topics {
+    .topic_listing {
+      width: 49.5%;
+    }
+  }
+  #header {
+    div {
+      h3 {
+        padding-right: 3%;
+      }
+    }
+  }
+}
+
+@media (max-width: 812px) {
+  #topics {
+    .topic_listing {
+      width: 49%;
+    }
+  }
+  #header {
+    div {
+      #home-mini {
+        display: block;
+        margin-top: 10px;
+        width: 40px;
+        a {
+          margin-left: 5px;
+          color: #1E3139;
+        }
+      }
+      #home {
+        display: none;
+      }
+      h3 {
+        padding-right: 0px;
+        width: 90%;
+      }
+      #logout-mini {
+        display: block;
+        width: 40px;
+        margin-top: 10px;
+        a {
+          float: right;
+          margin-right: 5px;
+          color: #1E3139;
+        }
+      }
+      #logout {
+        display: none;
+      }
+    }
+  }
+  #add_topic {
+    #search-mini {
+      display: inline;
+      float: right;
+      width: 35%;
+      padding-right: 6px;
+      .to_search {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    #topics {
+      .topic_listing {
+        width: 99%;
+      }
+    }
+    #header {
+      div {
+        h3 {
+          font-size: 37px;
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+    #add_topic {
+      display: none;
+    }
+    #add_topic-mini {
+      display: block;
+      font-size: 37px;
+      text-align: center;
+      .add_link {
+        cursor: pointer;
+        color: blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      #search-mini {
+        padding: 0px;
+        width: 100%;
+        display: block;
+        .to_search {
+          font-size: 37px;
+          width: 100%;
+        }
+      }
+    }
   }
 }
