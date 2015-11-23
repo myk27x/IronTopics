@@ -140,18 +140,14 @@ body {
 
 #add_field {
   margin: 20px;
-  #topic_title, #topic_description {
+  #topic_title, #topic_description, #topic_focus, #topic_submit {
     font-size: 29px;
-    width: 48%;
-    margin: 5px;
-  }
-  #topic_focus, #topic_submit {
-    font-size: 29px;
-    width: 48%;
+    width: 100%;
     margin: 5px;
     input {
-      width: 48%;
+      width: 100%;
       text-align: center;
+      border-color: #ddd;
       &:hover {
         background-color: #00e600;
         border-color: green;

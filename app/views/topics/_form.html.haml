@@ -1,7 +1,6 @@
 = form_for(@topic) do |f|
   #add_field
     = f.text_field :title, placeholder: " Title"
-    %span
-      = f.text_field :description, placeholder: " Description"
+    = f.text_field :description, placeholder: " Description"
     = f.text_field :focus, placeholder: " Focus area"
-    %span#topic_submit= f.submit
+    #topic_submit= f.submit
