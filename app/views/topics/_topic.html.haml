@@ -9,4 +9,4 @@
 
   .edit
     - unless topic.comment_count > 0 || topic.user_id != current_user.id
-      = link_to "edit", edit_topic_path(topic), class: "edit_link"
+      .edit_link editable
