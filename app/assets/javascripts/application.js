@@ -16,6 +16,12 @@
 //= require bootstrap.min.js
 //= require_tree .
 
+$(function() {
+   $('.notice').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).slideUp('slow');
+   });
+});
+
 var setStars = function()
 {
   $('input.rating').each(function() {
