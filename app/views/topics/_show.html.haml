@@ -11,17 +11,17 @@
   #ratings.well.well-sm
     - @topic.interests.each do |interest|
       #user_rating
-        - if interest.rating
-          - (5 - interest.rating).times do
-            .glyphicon.glyphicon-ok-sign#minus_rating
-          - interest.rating.times do
-            .glyphicon.glyphicon-ok-sign#star_rating
-        - else
-          - 5.times do
-            .glyphicon.glyphicon-ok-sign#minus_rating
-        %span= @user.name
-        %span said:
-        %span= interest.comment
+        %span.name= @user.name
+        %span.rating
+          - if interest.rating
+            - (5 - interest.rating).times do
+              .glyphicon.glyphicon-ok-sign#minus_rating
+            - interest.rating.times do
+              .glyphicon.glyphicon-ok-sign#star_rating
+          - else
+            - 5.times do
+              .glyphicon.glyphicon-ok-sign#minus_rating
+      .comment= interest.comment
     %div
       = form_for(@interest) do |f|
         .field
@@ -30,6 +30,8 @@
               #blank.glyphicon.glyphicon-ok-sign
           - else
             = f.hidden_field :rating, class: "rating form_control"
-          = f.text_field :comment, placeholder: 'type your comment here', size: 100
-          = hidden_field_tag(:topic_id, @topic.id)
-          = f.submit("Comment")
+            %span.rating_text
+              \- rate this topic?
+          = f.text_field :comment, placeholder: ' type your comment here'
+          = hidden_field_tag :topic_id, @topic.id
+          = f.submit "Comment"
