@@ -98,6 +98,26 @@
       $input
         .on('change', function () {
           rating._updateRate($(this).val());
+
+          var message = ""
+          switch ($(this).val()) {
+            case "1":
+            message = '"Not too interested..."'
+            break;
+            case "2":
+            message = '"It\'s ok, I guess."'
+            break;
+            case "3":
+            message = '"I wouldn\'t mind going over that."'
+            break;
+            case "4":
+            message = '"Definitely want to see this happen!"'
+            break;
+            case "5":
+            message = '"ZOMG AWESOMESAUCE! ::dies::"'
+            break;
+          }
+          $('.rating_text').text(message);
         });
 
       var fractionalIndex = function (e) {
