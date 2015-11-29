@@ -1,3 +1,18 @@
+:javascript
+  $(document).ready(function(){
+  var textContainer, textareaSize, input;
+  var autoSize = function () {
+    textareaSize.innerHTML = input.value + '\n';
+  };
+
+  textContainer = document.querySelector('.textarea-container');
+  textareaSize = textContainer.querySelector('.textarea-size');
+  input = textContainer.querySelector('textarea');
+
+  autoSize();
+  input.addEventListener('input', autoSize);
+  });
+
 #comment_page
   #title
     %div
@@ -32,6 +47,8 @@
             = f.hidden_field :rating, class: "rating form_control"
             %span.rating_text
               \- rate this topic?
-          = f.text_field :comment, placeholder: ' type your comment here'
+          .textarea-container
+            = f.text_area :comment, placeholder: ' type your comment here'
+            .textarea-size
           = hidden_field_tag :topic_id, @topic.id
           = f.submit "Comment"
