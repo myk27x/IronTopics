@@ -156,10 +156,15 @@ body {
   }
 }
 
-#comment_page {
-  margin: 4px;
-  padding: 0px 20px;
+.comment_page {
 }
+
+.modal {
+  .modal-content {
+    background: none;
+  }
+}
+
 .glyphicon {
   font-size: 19px;
 }
