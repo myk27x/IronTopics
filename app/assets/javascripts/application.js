@@ -28,5 +28,5 @@ var setStars = function()
     $(this).rating();
   });
 }
-// $(document).ready(setStars);
+$(document).ready(setStars);
 $(document).on('page:load', setStars);
