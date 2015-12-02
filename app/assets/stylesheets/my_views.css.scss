@@ -161,6 +161,44 @@ body {
 }
 
 .comment_page {
+  .topic_listing {
+    &:hover {
+      #no_decor {
+        text-decoration: none;
+      }
+    }
+    #no_pointer {
+      cursor: default;
+    }
+    #no_decor {
+      color: black;
+    }
+    .edit {
+      cursor: default;
+      #edit {
+        width: auto;
+        float: right;
+        color: blue;
+        font-weight: bolder;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+#edit_form {
+  #cancel {
+    float: right;
+    margin-top: -15px;
+    margin-right: 18px;
+  }
 }
 
 .modal {
@@ -194,6 +232,7 @@ body {
 }
 
 #ratings {
+  margin: 0 4px 2px 4px;
   #user_rating {
     background-color: #ddd;
     padding-top: 2px;
@@ -208,12 +247,11 @@ body {
     }
   }
   .comment {
-    padding-top: 2px;
     background-color: #fff;
     border: solid 1px black;
     border-top: 0px;
     margin-bottom: 3px;
-    padding-left: 10px;
+    padding: 2px 0 0 10px;
   }
   div {
     .rating_text {
