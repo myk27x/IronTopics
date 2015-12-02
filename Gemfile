@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 
 # Use faker gem for seed data/testing
 gem 'faker'
