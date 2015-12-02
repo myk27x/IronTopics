@@ -16,26 +16,18 @@
 .comment_page
   #topics
     .topic_listing
-      %div
+      %div#no_pointer
         .thing_holder
           .thing1=topic.focus
           .thing2
             interest score
             %span= topic.score
-        %p= topic.title
+        %p#no_decor= topic.title
 
       .edit
         - unless topic.comment_count > 0 || topic.user_id != current_user.id
-          .edit_link edit
-  -# #title
-  -#   %div
-  -#     = @topic.title
-  -#     \ :
-  -#   #description=@topic.description
-  -# #focus
-  -#   Focus area:
-  -#   = @topic.focus
-
+          .edit_link#edit edit
+    #update= render 'edit'
   #ratings.well.well-sm
     - @topic.interests.each do |interest|
       #user_rating
