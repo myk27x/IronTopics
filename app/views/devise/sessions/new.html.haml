@@ -1,0 +1,10 @@
+#wat
+  #noheader
+  #main_log
+    %h2 Seellll yourrr sooouuulllll to theee gittzzzzzz....
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      %p (then get to work by siging in...)
+      = link_to omniauth_authorize_path(resource_name, :github), class: "btn btn-social-icon btn-lrg btn-github" do
+        %i.fa.fa-lg.fa-github
+      = t('.sign_in_with_provider', provider: "github".titleize, :default => "")
+  #nofooter
