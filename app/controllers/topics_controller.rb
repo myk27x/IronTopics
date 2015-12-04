@@ -12,7 +12,11 @@ class TopicsController < ApplicationController
 
   def search
     found = params[:title]
-    @topic = Topic.where("title like ?", "%#{found}%")
+    # use this line for sqlite db
+    # @topic = Topic.where("title like ?", "%#{found}%")
+
+    # use this line for postgres db
+    @topic = Topic.where("title ilike ?", "%#{found}%")
   end
 
   def show
