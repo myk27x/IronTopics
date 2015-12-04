@@ -11,49 +11,67 @@
 
   autoSize();
   input.addEventListener('input', autoSize);
+
+  $('#edit').click(function(){
+  console.log("I clicked to EDIT")
+  jQuery('#topic').addClass('hide');
+  jQuery('#update').removeClass('hide');
   });
 
-.comment_page
-  #topics
-    .topic_listing
-      %div#no_pointer
-        .thing_holder
-          .thing1=topic.focus
-          .thing2
-            interest score
-            %span= topic.score
-        %p#no_decor= topic.title
+  $('#cancel').click(function(){
+  console.log("I clicked to CANCEL")
+  jQuery('#topic').removeClass('hide');
+  jQuery('#update').addClass('hide');
+  });
+  });
 
-      .edit
-        - unless topic.comment_count > 0 || topic.user_id != current_user.id
-          .edit_link#edit edit
-    #update= render 'edit'
-  #ratings.well.well-sm
-    - @topic.interests.each do |interest|
-      #user_rating
-        %span.name= @user.name
-        %span.rating
-          - if interest.rating
-            - (5 - interest.rating).times do
-              .glyphicon.glyphicon-ok-sign#minus_rating
-            - interest.rating.times do
-              .glyphicon.glyphicon-ok-sign#star_rating
-          - else
-            - 5.times do
-              .glyphicon.glyphicon-ok-sign#minus_rating
-      .comment= interest.comment
-    %div
-      = form_for(@interest) do |f|
-        .field
-          - if @rated != []
-            - 5.times do
-              #blank.glyphicon.glyphicon-ok-sign
-          - else
-            = f.hidden_field :rating, class: "rating form_control"
-            %span.rating_text
-              \- rate this topic?
-          .textarea-container
-            = f.text_area :comment, placeholder: ' type your comment here'
-            .textarea-size
-          = hidden_field_tag :topic_id, @topic.id
-          = f.submit "Comment"
+-# TODO move from jquery to ajax request
+
+.comment_page
+  #update.hide
+    = render 'edit'
+    .cancel
+      %button#cancel CANCEL
+  #topic
+    #topics
+      .topic_listing
+        %div#no_pointer
+          .thing_holder
+            .thing1=topic.focus
+            .thing2
+              interest score
+              %span= topic.score
+          %p#no_decor= topic.title
+
+        .edit
+          - unless topic.comment_count > 0 || topic.user_id != current_user.id
+            .edit_link#edit edit
+    #ratings.well.well-sm
+      - @topic.interests.each do |interest|
+        #user_rating
+          %span.name= @user.name
+          %span.rating
+            - if interest.rating
+              - (5 - interest.rating).times do
+                .glyphicon.glyphicon-ok-sign#minus_rating
+              - interest.rating.times do
+                .glyphicon.glyphicon-ok-sign#star_rating
+            - else
+              - 5.times do
+                .glyphicon.glyphicon-ok-sign#minus_rating
+        .comment= interest.comment
+      %div
+        = form_for(@interest) do |f|
+          .field
+            - if @rated != []
+              - 5.times do
+                #blank.glyphicon.glyphicon-ok-sign
+            - else
+              = f.hidden_field :rating, class: "rating form_control"
+              %span.rating_text
+                \- rate this topic?
+            .textarea-container
+              = f.text_area :comment, placeholder: ' type your comment here'
+              .textarea-size
+            = hidden_field_tag :topic_id, @topic.id
+            = f.submit "Comment"
