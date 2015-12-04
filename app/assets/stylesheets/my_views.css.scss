@@ -143,11 +143,11 @@ body {
 }
 
 #add_field {
-  margin: 20px;
+  margin: 5px;
   #topic_title, #topic_description, #topic_focus, #topic_submit {
     font-size: 29px;
     width: 100%;
-    margin: 5px;
+    margin: 5px 0;
     input {
       width: 100%;
       text-align: center;
@@ -193,11 +193,13 @@ body {
   display: none;
 }
 
-#edit_form {
-  #cancel {
-    float: right;
-    margin-top: -15px;
-    margin-right: 18px;
+#update {
+  .cancel {
+    height: 30px;
+    #cancel {
+      float: right;
+      margin-right: 6px;
+    }
   }
 }
 
