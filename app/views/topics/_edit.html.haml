@@ -1,2 +1,13 @@
+:javascript
+  $('#cancel').click(function(){
+  var id = $(this).data('topic-id');
+  $.ajax('/topics/' + id, {
+  method: 'GET',
+  });
+  });
+
 #edit_form
-  = render 'form'
+  #update
+    = render 'form'
+    .cancel
+      %button#cancel{ 'data-topic-id': "#{@topic.id}"} CANCEL
