@@ -1,5 +1,4 @@
 :javascript
-  $(document).ready(function(){
   var textContainer, textareaSize, input;
   var autoSize = function () {
     textareaSize.innerHTML = input.value + '\n';
@@ -14,24 +13,17 @@
 
   $('#edit').click(function(){
   console.log("I clicked to EDIT")
-  jQuery('#topic').addClass('hide');
-  jQuery('#update').removeClass('hide');
-  });
-
-  $('#cancel').click(function(){
-  console.log("I clicked to CANCEL")
-  jQuery('#topic').removeClass('hide');
-  jQuery('#update').addClass('hide');
+  $(".modal-content").html("");
+  var id = $(this).data('topic-id');
+  console.log(id)
+  $.ajax('/topics/' + id + '/edit', {
+  method: 'GET',
   });
   });
 
 -# TODO move from jquery to ajax request
 
 .comment_page
-  #update.hide
-    = render 'edit'
-    .cancel
-      %button#cancel CANCEL
   #topic
     #topics
       .topic_listing
@@ -45,7 +37,8 @@
 
         .edit
           - unless topic.comment_count > 0 || topic.user_id != current_user.id
-            .edit_link#edit edit
+            .edit_link#edit{ 'data-topic-id': "#{topic.id}" } edit
+            -# .edit_link#edit= link_to "edit", edit_topic_path(topic)
     #ratings.well.well-sm
       - @topic.interests.each do |interest|
         #user_rating
