@@ -23,7 +23,6 @@ class TopicsController < ApplicationController
     @commented = current_user.interests.where("topic_id = ?", @topic.id)
     @rated = @commented.where("rating is not null")
     @interest = Interest.new
-    @user = User.find(current_user.id)
   end
 
   def create

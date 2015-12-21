@@ -25,22 +25,26 @@
   #topic
     #topics
       .topic_listing
-        %div#no_pointer
+        #no_pointer
           .thing_holder
             .thing1=topic.focus
             .thing2
               interest score
               %span= topic.score
           %p#no_decor= topic.title
-
         .edit
           - unless topic.comment_count > 0 || topic.user_id != current_user.id
             .edit_link#edit{ 'data-topic-id': "#{topic.id}" } edit
             -# .edit_link#edit= link_to "edit", edit_topic_path(topic)
+
     #ratings.well.well-sm
+      %div{style: "text-decoration: underline"}
+        =topic.user.name
+        says:
+      #description= topic.description
       - @topic.interests.each do |interest|
         #user_rating
-          %span.name= @user.name
+          %span.name= interest.user.name
           %span.rating
             - if interest.rating
               - (5 - interest.rating).times do
